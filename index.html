@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Simple Responsive Gallery - CodePen</title>
+
+    <style>
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body{
+  background: #000;
+  color: #fff;
+  padding: 40px;
+  font-family: sans-serif;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.gallery{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+[class*='thumbnail-']{
+  background: #000;
+  width: 33.33%;
+  height: auto;
+  float: left;
+  padding: 5px 5px 3px 5px;
+  cursor: pointer;
+}
+
+[class*='thumbnail-'] img{
+  max-width: 100%;
+}
+
+[class*='large-']{
+  background: #000;
+  width: 90%;
+  margin: 0 auto;
+  padding: 30px;
+  cursor: pointer;
+  display: none;
+}
+
+[class*='large-'] img{
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.prev{
+  color: #fff;
+  font-size: 60px;
+  position: absolute;
+  top: 45%;
+  left: 10px;
+  float: left;
+}
+
+.next{
+  color: #fff;
+  font-size: 60px;
+  position: absolute;
+  top: 45%;
+  right: 10px;
+  float: right;
+}
+
+.close{
+  color: #fff;
+  font-size: 30px;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  float: right;
+}
+
+[class*='thumbnail-']{
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+}
+
+[class*='thumbnail-']:hover img{
+  transition: .3s linear;
+  transition-delay: 300ms;
+  transform: rotate(5deg) scale(1.4);
+}
+
+[class*='thumbnail-'] > .caption{
+  display: none;
+  position: absolute;
+  bottom: 0;
+  padding: 15px;
+  width: 100%;
+  background-color: black;
+  color: white;
+  opacity: 0.8;
+}
+
+[class*='thumbnail-']:hover > .caption{
+  display: block;
+}
+
+</style>
+
+  <script src="js/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+
+  <div class="gallery">
+  <div class="thumbnail-1">
+    <img src="http://lorempixel.com/output/city-q-c-640-480-9.jpg" alt="" />
+    <div class="caption">
+      <h3>San Francisco</h3>
+    </div>  
+  </div>
+  <div class="large-1">
+    <img src="http://lorempixel.com/output/city-q-c-640-480-9.jpg" alt="" />
+    <span class="close">&#x2715;</span>
+  </div>
+  <div class="thumbnail-2">
+    <img src="http://lorempixel.com/output/city-q-c-640-480-6.jpg" alt="" />
+    <div class="caption">
+      <h3>Paris</h3>  
+    </div> 
+  </div>
+  <div class="large-2">
+    <img src="http://lorempixel.com/output/city-q-c-640-480-6.jpg" alt="" />
+    <span class="close">&#x2715;</span>
+  </div>
+  <div class="thumbnail-3">
+    <img src="http://lorempixel.com/output/city-q-c-640-480-7.jpg" alt="" />
+    <div class="caption">
+      <h3>Sydney</h3>  
+    </div> 
+  </div>
+  <div class="large-3">
+    <img src="http://lorempixel.com/output/city-q-c-640-480-7.jpg" alt="" />
+    <span class="close">&#x2715;</span>
+  </div>
+  <div class="thumbnail-4">
+    <img src="http://lorempixel.com/output/city-q-c-640-480-5.jpg" alt="" />
+    <div class="caption">
+      <h3>Tokyo</h3>  
+    </div> 
+  </div>
+  <div class="large-4">
+    <img src="http://lorempixel.com/output/city-q-c-640-480-5.jpg" alt="" />
+    <span class="close">&#x2715;</span>
+  </div>  
+  <div class="thumbnail-5">
+    <img src="http://lorempixel.com/output/city-q-c-640-480-1.jpg" alt="" />
+    <div class="caption">
+      <h3>Berlin</h3>  
+    </div> 
+  </div>
+  <div class="large-5">
+    <img src="http://lorempixel.com/output/city-q-c-640-480-1.jpg" alt="" />
+    <span class="close">&#x2715;</span>
+  </div> 
+  <div class="thumbnail-6">
+    <img src="http://lorempixel.com/output/city-q-c-640-480-4.jpg" alt="" />
+    <div class="caption">
+      <h3>New York</h3>  
+    </div> 
+  </div>
+  <div class="large-6">
+    <img src="http://lorempixel.com/output/city-q-c-640-480-4.jpg" alt="" />
+    <span class="close">&#x2715;</span>
+  </div> 
+  <div class="thumbnail-7">
+    <img src="http://lorempixel.com/output/city-q-c-640-480-3.jpg" alt="" />
+    <div class="caption">
+      <h3>New York</h3>  
+    </div> 
+  </div>
+  <div class="large-7">
+    <img src="http://lorempixel.com/output/city-q-c-640-480-3.jpg" alt="" />
+    <span class="close">&#x2715;</span>
+  </div> 
+  <div class="thumbnail-8">
+    <img src="http://lorempixel.com/output/city-q-c-640-480-2.jpg" alt="" />
+    <div class="caption">
+      <h3>New York</h3>  
+    </div> 
+  </div>
+  <div class="large-8">
+    <img src="http://lorempixel.com/output/city-q-c-640-480-2.jpg" alt="" />
+    <span class="close">&#x2715;</span>
+  </div> 
+  <div class="thumbnail-9">
+    <img src="http://lorempixel.com/output/city-q-c-640-480-8.jpg" alt="" />
+    <div class="caption">
+      <h3>Brisbane</h3>  
+    </div> 
+  </div>
+  <div class="large-9">
+    <img src="http://lorempixel.com/output/city-q-c-640-480-8.jpg" alt="" />
+    <span class="close">&#x2715;</span>
+    <!-- <span class="prev">&lsaquo;</span>
+    <span class="next">&rsaquo;</span> -->
+  </div>   
+</div>
+
+  <script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>
+
+  <script src="js/index.js"></script>
+
+</body>
+
+</html>
